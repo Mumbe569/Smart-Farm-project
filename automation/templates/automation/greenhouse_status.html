@@ -1,0 +1,27 @@
+<!-- automation/templates/automation/update_status.html -->
+<html>
+<head>
+    <title>SMART FARM GREENHOUSE AUTOMATION SYSTEM </title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\DEL\SMART FARM Greanhouse Automation system\static\styles.css">
+</head>
+<body>
+    <h1>SMART FARM GREENHOUSE AUTOMATION SYSTEM </h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="temperature">Temperature:</label>
+        <input type="number" name="temperature" value="{{ greenhouse.temperature }}"><br><br>
+
+        <label for="humidity">Humidity:</label>
+        <input type="number" name="humidity" value="{{ greenhouse.humidity }}"><br><br>
+
+        <label for="light">Light:</label>
+        <input type="number" name="light" value="{{ greenhouse.light }}"><br><br>
+
+        <label for="soil_moisture">Soil Moisture:</label>
+        <input type="number" name="soil_moisture" value="{{ greenhouse.soil_moisture }}"><br><br>
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
+
